@@ -6,6 +6,7 @@ class ProgramAyarlariWindow(ctk.CTkToplevel):
         super().__init__(master)
         self.master_app = master; self.title("Zamanlama Ayarları"); self.geometry("600x500"); self.transient(master); self.grab_set()
         gun_cerceve = ctk.CTkFrame(self); gun_cerceve.pack(pady=10, padx=10, fill="x"); ctk.CTkLabel(gun_cerceve, text="Günler").pack()
+        ctk.CTkButton(gun_cerceve, text="Yeni Gün Ekle", command=lambda: self.gun_ekle()).pack(pady=2)
         self.gunler_scroll_cerceve = ctk.CTkScrollableFrame(gun_cerceve, height=80); self.gunler_scroll_cerceve.pack(fill="x", expand=True)
         saat_cerceve = ctk.CTkFrame(self); saat_cerceve.pack(pady=10, padx=10, fill="both", expand=True); ctk.CTkLabel(saat_cerceve, text="Saatler").pack()
         ctk.CTkButton(saat_cerceve, text="Yeni Saat Ekle", command=lambda: self.saat_ekle()).pack(pady=2)
