@@ -1,6 +1,0 @@
-customtkinter
-requests
-Pillow
-fpdf
-pystray
-tkcalendar
